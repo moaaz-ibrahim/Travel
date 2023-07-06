@@ -18,7 +18,7 @@ const navigator = createStackNavigator(
     },
     Gallery : GalleryScreen
   },
-  {initialRouteName : 'Gallery'}
+  // {initialRouteName : 'Gallery'}
 );
 const AppContainer =createAppContainer(navigator);
 export default function App(){
