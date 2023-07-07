@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 250,
+    height: 200,
     backgroundColor: '#0a293b',
   },
   row: {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   bookingsContainer:{
-    marginTop : 35
+    marginTop : 20
   }
 });
 

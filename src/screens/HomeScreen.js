@@ -11,13 +11,13 @@ import BottomBar from "../components/BottomBar";
 const HomeScreen = ({navigation})=>{
     // console.log(navigation)
     
- return <View style={{flex: 1}} >
+ return <View style={{flex: 1 , backgroundColor: '#f5f3e9'}} >
     <NavBar></NavBar>
     <ScrollView >
 
     <SearchBar></SearchBar>
     <ImageSection></ImageSection>
-    <Destinations></Destinations>
+    <Destinations navigation={navigation}></Destinations>
     <Deals></Deals>
     </ScrollView>
 <BottomBar navigation ={navigation}></BottomBar>

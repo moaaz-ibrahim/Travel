@@ -7,7 +7,7 @@ const App = () => {
       <ImageBackground
         source={{
           uri:
-            'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+            'https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=468&q=80',
         }}
         style={styles.imageBackground}
         imageStyle={styles.image}
@@ -19,9 +19,15 @@ const App = () => {
         <Text style={styles.desc}>
           book your next trip with egyliere {'\n'} with top-notch hotels and events.
         </Text>
+        {/* <View style={styles.btn}>
+        <Button  title='START BOOKING'></Button>
+
+        </View> */}
+        
         <TouchableOpacity style={styles.btn}>
             <Text style={styles.btnInside}>START BOOKING</Text>
         </TouchableOpacity>
+        
       </ImageBackground>
     </View>
   );
@@ -30,7 +36,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     width: 400,
-    height: 200,
+    height: 250,
     backgroundColor: 'red',
   },
   imageBackground: {
@@ -46,43 +52,55 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '50%',
+    width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    // marginLeft : 40, 
+    // backgroundColor : 'red'
+    // marginTop :20, 
+    // marginLeft : 100
   },
   text: {
+    paddingLeft : 20,  
     color: 'black',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
     alignSelf: 'flex-start',
-    marginLeft: 10
+    marginLeft: '3%'
   },
   desc :{
-    color: 'gray',
-    fontWeight: 20,
+    paddingLeft : 20,
+    color: '#474747',
+    fontWeight: '400',
     fontSize: 14,
     // fontWeight: 'bold',
     alignSelf: 'flex-start',
-    marginLeft: 10,
-    marginTop :10
+    marginLeft: '3%',
+    marginTop :3
   }
+  
 ,
 btn : {
+  marginLeft : 20,
     flexDirection: 'row',
     alignSelf :'flex-start',
-    marginLeft : 15 ,
+    marginLeft : '8%' ,
     marginTop :15,
-    width :150 ,
-    height: 40,
+   height : 40,
+   width : 160,
     backgroundColor: '#1e1e1e',
-    borderRadius :10
+    borderRadius :5, 
+    
 },
 btnInside :{
     alignSelf: 'center',
     fontWeight :'bold',
     justifyContent: 'center',
-    left : '50%' , 
-    color: 'white'
+    left : '75%' ,
+     
+    color: 'white',
+    fontSize: 12,
+    // padding :5
 }
 });
 

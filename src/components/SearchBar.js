@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import {TextInput , View, Text, StyleSheet} from 'react-native';
 import { Feather } from '@expo/vector-icons';
 // import { Foundation } from '@expo/vector-icons';
 // import { FontAwesome } from '@expo/vector-icons';
 
+
 const SearchBar = ()=>{
+  const [text , setText] = useState('Where to go?')
     return   <View style={styles.container}>
 
-    
     <View style={styles.placeholderContainer}>
       <Text style={styles.placeholderText}>Destination</Text>
     </View>
@@ -16,7 +17,8 @@ const SearchBar = ()=>{
 
   <TextInput
     style={styles.input}
-    value="Where to go?"
+    value={text}
+    onChangeText={(t)=>{setText(t)}}
   />
     <Feather style={{left : '90%' , top: -20}} name="compass" size={24} color="red" />
 {/* </View> */}
@@ -25,17 +27,18 @@ const SearchBar = ()=>{
 
 const styles = StyleSheet.create({
     container: {
-        width: '80%',
+        width: '90%',
         height: 70,
         borderRadius: 10,
         marginTop : 15 ,
         borderColor: 'black',
         paddingHorizontal: 10,
-        marginBottom: 10,
+        marginBottom: 15,
         alignSelf: 'center',
         backgroundColor: 'white'
       },
       placeholderContainer: {
+        marginLeft: 10,
         position: 'absolute',
         top: 10,
         left: 10,
@@ -46,12 +49,15 @@ const styles = StyleSheet.create({
         fontSize: 16,
       },
       input: {
+        marginLeft: 10,
         flex : 1,
         color: '#2f4a59',
         fontSize: 16,
-        marginTop:  40,
+        marginTop:  25,
         fontWeight : 'bold', 
-        fontFamily: 'Raleway',
+        // fontFamily: 'Raleway',
+        height : 50,
+        // backgroundColor: 'red'
         
       }
     // input : {
