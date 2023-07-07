@@ -36,7 +36,7 @@ const SwiperHotel = ({id}) => {
     },
     container: {
         borderWidth : 1 ,
-        height: '25%' , 
+        height: '100%' , 
         width : '100%'
     }, 
     img : {
