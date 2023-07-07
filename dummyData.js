@@ -1,6 +1,6 @@
 export const DESTINATIONS = [
   {
-    id:1,
+    id:0,
     name: "The Chedi El Gouna",
     logo: "https://1000logos.net/wp-content/uploads/2020/02/Sheraton-Logo-1937.png",
     address: "Hill Villas Rd, Hurghada 2, Red Sea Governorate 84513",
@@ -46,7 +46,7 @@ export const DESTINATIONS = [
   },
 
   {
-    id:2,
+    id:1,
     name: "Sheraton Miramar",
     logo: "https://1000logos.net/wp-content/uploads/2020/02/Sheraton-Logo-1937.png",
 
@@ -93,7 +93,7 @@ export const DESTINATIONS = [
   },
 
   {
-    id:3,
+    id:2,
     name: "Siwa Shali Resort",
     logo: "https://1000logos.net/wp-content/uploads/2020/02/Sheraton-Logo-1937.png",
 
@@ -141,7 +141,7 @@ export const DESTINATIONS = [
     ],
   },
   {
-    id:4,
+    id:3,
     name: "Long Beach Resort",
     logo: "https://1000logos.net/wp-content/uploads/2020/02/Sheraton-Logo-1937.png",
 

@@ -6,7 +6,7 @@ import { DESTINATIONS } from '../../dummyData';
 const SwiperHotel = ({id}) => {
     const hotel = DESTINATIONS[id];
     const hotelPhotos = hotel.rooms;
-    console.log(hotelPhotos)
+    // console.log(hotelPhotos)
     return (
       <View  style={styles.container}>
 
@@ -36,7 +36,7 @@ const SwiperHotel = ({id}) => {
     },
     container: {
         borderWidth : 1 ,
-        height: '30%' , 
+        height: '25%' , 
         width : '100%'
     }, 
     img : {

@@ -18,7 +18,12 @@ const navigator = createStackNavigator(
       }
     },
     Gallery : GalleryScreen, 
-    Hotel: HotelScreen
+    Hotel: {
+      screen : HotelScreen, 
+    navigationOptions : {
+      headerShown : false
+    }
+    }
   },
   // {initialRouteName : 'Gallery'}
 );
