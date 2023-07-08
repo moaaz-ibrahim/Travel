@@ -5,6 +5,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import HomeScreen from './src/screens/HomeScreen';
 import GalleryScreen from './src/screens/GalleryScreen';
 import HotelScreen from './src/screens/HotelScreen';
+import LocationScreen from './src/screens/LocationScreen';
 // import Fonts from './src/fonts/Fonts';
 // import * as Font from 'expo-font';
 // import { useEffect } from 'react';
@@ -23,6 +24,12 @@ const navigator = createStackNavigator(
     navigationOptions : {
       headerShown : false
     }
+    }, 
+    Location :{
+      screen: LocationScreen, 
+      navigationOptions: {
+        headerShown : false
+      }
     }
   },
   // {initialRouteName : 'Gallery'}

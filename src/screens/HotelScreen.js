@@ -38,7 +38,7 @@ const HotelScreen = ({ navigation }) => {
       <TextDetails title={'Describtion'} content={description} maxChar={150}></TextDetails>
       <TextDetails title={'Benefits'} content={benefits} maxChar={150}></TextDetails>
       <TextDetails title={'House Rules'} content={houseRules} maxChar={150}></TextDetails>
-      <Location address={address}></Location>
+      <Location address={address} navigation={navigation}></Location>
       <ReviewsContainer rate={rate} reviewsNum={reviews.length} reviews={reviews}></ReviewsContainer>
      <Spacer space={100}></Spacer>
       <CustomButton title={'BOOK NOW!'}></CustomButton>

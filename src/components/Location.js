@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { Entypo } from '@expo/vector-icons';
 import axios from "axios";
-const Location = ({address}) => {
+const Location = ({address , navigation}) => {
     // const customMarker = require('../../assets/marker.png');
     const [latitude, setLatitude] = useState(0)
     const [longitude, setLongitude] = useState(0)
@@ -38,10 +38,10 @@ const Location = ({address}) => {
     
     
   return (
-    <View style={styles.container}>
+    <View style={styles.container} >
         <Text style={styles.dest}>Location</Text>
       {/* <Text style={styles.dest}>{title}</Text> */}
-      <MapView
+      <MapView onPress={()=>{navigation.navigate('Location' , {longitude , latitude})}}
         style={styles.map}
         region={{
           latitude,
