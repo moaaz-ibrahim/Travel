@@ -6,6 +6,7 @@ import ImageSection from "../components/ImageSection";
 import Destinations from "../components/Destinations";
 import Deals from "../components/Deals";
 import BottomBar from "../components/BottomBar";
+import Spacer from "../components/Spacer";
 
 
 const HomeScreen = ({navigation})=>{
@@ -19,6 +20,7 @@ const HomeScreen = ({navigation})=>{
     <ImageSection></ImageSection>
     <Destinations navigation={navigation}></Destinations>
     <Deals></Deals>
+    <Spacer space={30}></Spacer>
     </ScrollView>
 <BottomBar navigation ={navigation}></BottomBar>
  </View>

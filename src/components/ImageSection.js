@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     alignSelf: 'flex-start',
-    marginLeft: '3%'
+    marginLeft: '3%', 
+    marginTop :15
   },
   desc :{
     paddingLeft : 20,

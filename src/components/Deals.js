@@ -88,12 +88,13 @@ const styles = StyleSheet.create({
   },
   dealsViewAllContainer: {
     flexDirection: "row",
-    marginRight: 1,
+    marginRight: 18,
   },
   viewAll: {
     marginTop: 5,
     fontWeight: "500",
     color: "#0a293b",
+    
   },
 });
 

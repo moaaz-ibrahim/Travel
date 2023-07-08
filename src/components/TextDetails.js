@@ -27,7 +27,7 @@ const TextDetails = ({ title, content, maxChar }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 25,
+    marginVertical :35,
     marginLeft: 25,
     marginRight : 25 ,
     height: 130, 

@@ -28,7 +28,11 @@ const HotelPhotos = ({ photos }) => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.rowContainer}>
       <Text style={styles.dest}>Hotel Photos</Text>
+      <Text style={{marginRight: 10 , color :'gray' , fontWeight: '600'}}>See All</Text>
+      </View>
+     
       <FlatList
         horizontal
         keyExtractor={(item) => item.id}
@@ -45,6 +49,7 @@ const styles = StyleSheet.create({
   },
   container: {
     marginTop: 35,
+    // backgroundColor :'red'
   },
   dest: {
     color: "#0a293b",
@@ -69,6 +74,10 @@ const styles = StyleSheet.create({
     height: "100%",
     borderRadius: 20,
   },
+  rowContainer : {
+    flexDirection :'row' , 
+    justifyContent : 'space-between'
+  }
 });
 
 export default HotelPhotos;
