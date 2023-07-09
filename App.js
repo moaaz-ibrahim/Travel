@@ -38,7 +38,10 @@ const navigator = createStackNavigator(
       } 
     } , 
     Booking :{
-      screen :BookingScreen
+      screen :BookingScreen , 
+      navigationOptions :{
+        headerShown : false
+      }
     }
   },
   // {initialRouteName : 'Gallery'}

@@ -5,7 +5,7 @@ const CustomButton = ({title , go})=>{
     {return go ? <>
     
      <View style={styles.container}>
-        <Button onPress={()=>{go.navigation.navigate(go.target)}} color={'white'} title={title}></Button>
+        <Button onPress={()=>{go.navigation.navigate(go.target ,{name : go.name} )}} color={'white'} title={title}></Button>
     </View>
     </> : <>
     

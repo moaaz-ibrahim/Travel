@@ -13,6 +13,7 @@ import CustomButton from "../components/CustomButton";
 const HotelScreen = ({ navigation }) => {
   const id = navigation.getParam("id");
   console.log(id);
+  const name = DESTINATIONS[id].name;
   const photos = DESTINATIONS[id].hotel_photos;
   const description = DESTINATIONS[id].description; 
   const benefits = DESTINATIONS[id].benefits;
@@ -41,7 +42,7 @@ const HotelScreen = ({ navigation }) => {
       <Location address={address} navigation={navigation}></Location>
       <ReviewsContainer rate={rate} reviewsNum={reviews.length} reviews={reviews}></ReviewsContainer>
      <Spacer space={100}></Spacer>
-      <CustomButton title={'BOOK NOW!' } go={{ target :'Booking' ,navigation}} ></CustomButton>
+      <CustomButton title={'BOOK NOW!' } go={{ target :'Booking', name ,navigation}} ></CustomButton>
       <Spacer space={50}></Spacer>
     </ScrollView>
   );
