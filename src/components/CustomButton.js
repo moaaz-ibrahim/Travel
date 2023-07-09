@@ -1,10 +1,18 @@
 import React from "react";
 import { View , Text  ,StyleSheet , Button  } from "react-native";
 
-const CustomButton = ({title})=>{
-    return <View style={styles.container}>
+const CustomButton = ({title , go})=>{
+    {return go ? <>
+    
+     <View style={styles.container}>
+        <Button onPress={()=>{go.navigation.navigate(go.target)}} color={'white'} title={title}></Button>
+    </View>
+    </> : <>
+    
+     <View style={styles.container}>
         <Button color={'white'} title={title}></Button>
     </View>
+    </>}
 } 
 
 const styles = StyleSheet.create({

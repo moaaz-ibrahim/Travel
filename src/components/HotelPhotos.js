@@ -2,13 +2,13 @@ import React from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from "react-native";
 import { DESTINATIONS } from "../../dummyData";
 
-const HotelPhotos = ({ photos }) => {
+const HotelPhotos = ({ photos, navigation }) => {
   const renderListItem = ({ item, index }) => {
     if (index === 0) {
       return (
         <>
-          <View style={styles.spacer}></View>
-          <TouchableOpacity>
+          <View  style={styles.spacer}></View>
+          <TouchableOpacity onPress={()=>{navigation.navigate('Gallery' , {photos})}}>
             <View style={styles.imgContainer}>
               <Image style={styles.img} source={{ uri: item }} />
             </View>
@@ -18,7 +18,7 @@ const HotelPhotos = ({ photos }) => {
     }
 
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>{navigation.navigate('Gallery' , {photos})}}>
         <View style={styles.imgContainer}>
           <Image style={styles.img} source={{ uri: item }} />
         </View>
@@ -30,10 +30,10 @@ const HotelPhotos = ({ photos }) => {
     <View style={styles.container}>
       <View style={styles.rowContainer}>
       <Text style={styles.dest}>Hotel Photos</Text>
-      <Text style={{marginRight: 10 , color :'gray' , fontWeight: '600'}}>See All</Text>
+      <Text onPress={()=>{navigation.navigate('Gallery' , {photos})}} style={{marginRight: 10 , color :'gray' , fontWeight: '600'}}>See All</Text>
       </View>
      
-      <FlatList
+      <FlatList 
         horizontal
         keyExtractor={(item) => item.id}
         data={photos}

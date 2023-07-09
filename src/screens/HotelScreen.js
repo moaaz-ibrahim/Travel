@@ -33,7 +33,7 @@ const HotelScreen = ({ navigation }) => {
         <HotelDetails id={id} />
       </View>
       <View style={styles.photos}>
-        <HotelPhotos photos={photos} />
+        <HotelPhotos photos={photos} navigation={navigation}/>
       </View>
       <TextDetails title={'Describtion'} content={description} maxChar={150}></TextDetails>
       <TextDetails title={'Benefits'} content={benefits} maxChar={150}></TextDetails>
@@ -41,7 +41,7 @@ const HotelScreen = ({ navigation }) => {
       <Location address={address} navigation={navigation}></Location>
       <ReviewsContainer rate={rate} reviewsNum={reviews.length} reviews={reviews}></ReviewsContainer>
      <Spacer space={100}></Spacer>
-      <CustomButton title={'BOOK NOW!'}></CustomButton>
+      <CustomButton title={'BOOK NOW!' } go={{ target :'Booking' ,navigation}} ></CustomButton>
       <Spacer space={50}></Spacer>
     </ScrollView>
   );

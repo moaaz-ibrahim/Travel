@@ -6,6 +6,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import GalleryScreen from './src/screens/GalleryScreen';
 import HotelScreen from './src/screens/HotelScreen';
 import LocationScreen from './src/screens/LocationScreen';
+import BookingScreen from './src/screens/BookingScreen';
 // import Fonts from './src/fonts/Fonts';
 // import * as Font from 'expo-font';
 // import { useEffect } from 'react';
@@ -18,7 +19,12 @@ const navigator = createStackNavigator(
         headerShown: false
       }
     },
-    Gallery : GalleryScreen, 
+    Gallery : {
+      screen : GalleryScreen , 
+      navigationOptions : {
+        headerShown : false
+      }
+    }, 
     Hotel: {
       screen : HotelScreen, 
     navigationOptions : {
@@ -29,7 +35,10 @@ const navigator = createStackNavigator(
       screen: LocationScreen, 
       navigationOptions: {
         headerShown : false
-      }
+      } 
+    } , 
+    Booking :{
+      screen :BookingScreen
     }
   },
   // {initialRouteName : 'Gallery'}
