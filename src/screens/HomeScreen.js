@@ -7,6 +7,7 @@ import Destinations from "../components/Destinations";
 import Deals from "../components/Deals";
 import BottomBar from "../components/BottomBar";
 import Spacer from "../components/Spacer";
+import { SafeAreaView } from "react-navigation";
 
 
 const HomeScreen = ({navigation})=>{
@@ -22,6 +23,7 @@ const HomeScreen = ({navigation})=>{
     <Deals></Deals>
     <Spacer space={30}></Spacer>
     </ScrollView>
+    {/* <SafeAreaView></SafeAreaView> */}
 <BottomBar navigation ={navigation}></BottomBar>
  </View>
 };
