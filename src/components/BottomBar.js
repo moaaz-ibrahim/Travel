@@ -12,12 +12,13 @@ const BottomNavBar = ({navigation}) => {
   const [activeTap, setActiveTap] = useState('home');
   const [color,setColor] = useState(normalColor);
 // Yet to come 
-  const handleClick = ()=>{
-    navigation.navigate('Gallery')
-  }
+  // const handleClick = ()=>{
+  //   navigation.navigate('Gallery')
+  // }
 
   return (
     <View style={styles.container}>
+      {/* {activeTap === 'home' ? ():} */}
       <TouchableOpacity style={styles.tab} onPress={()=>{setActiveTap('home')}}>
       <AntDesign  name="home" size={20} color="white" />
         <Text style={styles.tabText}>Home</Text>
@@ -33,7 +34,7 @@ const BottomNavBar = ({navigation}) => {
         <Text style={styles.tabText}>Services</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tab} onPress={()=>{handleClick()}}>
+      <TouchableOpacity style={styles.tab} onPress={()=>{setActiveTap('gallery')}}>
       <Ionicons name="person" size={20} color="white" />
         <Text style={styles.tabText}>Gallery</Text>
       </TouchableOpacity>
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#0a293b",
     borderTopWidth: 1,
     // borderTopColor: "#ccc",
-    height: 60,
+    height: 80,
     // marginBottom : 20
   },
   tab: {
@@ -57,6 +58,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 10,
+    marginBottom :10
   },
   tabText: {
     fontSize: 12,
